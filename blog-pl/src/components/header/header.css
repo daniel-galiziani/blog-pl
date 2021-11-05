@@ -12,15 +12,16 @@
 
 .headerTitleSm {
   position: absolute;
-  top: 18%;
+  top: 10%;
   font-size: 40px;
   color: #006437;
 }
 
 .headerTitleLg {
   position: absolute;
-  top: 20%;
+  top: 15%;
   font-size: 100px;
+  z-index: 2;
 }
 
 .headerImg {
@@ -28,4 +29,5 @@
   height: 450px;
   margin-top: 80px;
   object-fit: cover;
+  opacity: 0.5;
 }
