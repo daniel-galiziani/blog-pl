@@ -1,0 +1,56 @@
+.register {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url('./torcida.jpeg');
+  background-size: cover;
+  align-items: center;
+}
+
+.registerTitle {
+  font-size: 30px;
+  color: #006437;
+}
+
+.registerForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registerForm > label {
+  margin: 10px 0;
+  color: #006437;
+}
+
+.registerInput {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  color: #006437;
+}
+
+.registerButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #006437;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.registerLoginButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #006437;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
