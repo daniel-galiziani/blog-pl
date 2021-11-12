@@ -1,19 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './register.css'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const Register = () => {
+    const [username, setUsername] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+
+const handleSubmit = async (e) => {
+    e.preventDefault()
+    const res = await axios.post("/auth/register", {
+        username,
+        email,
+        password,
+    })
+    res.data && window.location.replace("/login")
+}
+
     return (
         <div className='register'>
             <span className="registerTitle">Register</span>
-            <form className="registerForm">
+            <form className="registerForm" onSubmit={handleSubmit}>
                 <label>Username</label>
-                <input type="text" className='registerInput' placeholder='Enter your username...' />
+                <input 
+                    type="text" 
+                    className='registerInput' 
+                    placeholder='Enter your username...'
+                    onChange={e=> setUsername(e.target.value)} 
+                />
                 <label>Email</label>
-                <input type="email" className='registerInput' placeholder='Enter your email...' />
+                <input 
+                    type="email" 
+                    className='registerInput' 
+                    placeholder='Enter your email...'
+                    onChange={e=> setEmail(e.target.value)} 
+                />
                 <label>Password</label>
-                <input type="password" className='registerInput' placeholder='Enter your password...' />
-                <button className="registerButton">
+                <input 
+                    type="password" 
+                    className='registerInput' 
+                    placeholder='Enter your password...'
+                    onChange={e=> setPassword(e.target.value)} 
+                />
+                <button className="registerButton" type="submit">
                     <Link className='link' to='/register'>Register</Link>
                 </button>
                 <button className="registerLoginButton">
