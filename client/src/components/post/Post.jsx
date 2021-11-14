@@ -3,10 +3,11 @@ import { Link } from "react-router-dom"
 import './post.css'
 
 const Post = ({post}) => {
+    const PF = "http://localhost:1000/images/"
     return (
         <div className='post'>
             {post.photo && (
-            <img className='postImg' src={post.photo} alt="" />
+            <img className='postImg' src={PF + post.photo} alt="" />
             )}
             <div className="postInfo">
                 <div className="postCats">
