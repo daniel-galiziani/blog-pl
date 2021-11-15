@@ -81,3 +81,15 @@
   cursor: pointer;
   margin-top: 20px;
 }
+
+.settingsEmailInput:focus {
+  outline: none;
+}
+
+.settingsUsernameInput:focus {
+  outline: none;
+}
+
+.settingsPasswordInput:focus {
+  outline: none;
+}

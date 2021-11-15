@@ -23,7 +23,7 @@ const Sidebar = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta doloremque quam provident vero nihil sequi fugiat quo optio itaque, vel commodi inventore nam quae ad, esse sint incidunt repudiandae fuga.
                 </p>
             </div>
-            <div className="sidebarItem">
+            {/* <div className="sidebarItem">
                 <span className='sidebarTitle'>CATEGORIAS</span>
                 <ul className="sidebarList">
                     {cats.map((c)=>(
@@ -33,14 +33,28 @@ const Sidebar = () => {
                     ))}
                     
                 </ul>
-            </div>
+            </div> */}
             <div className="sidebarItem">
             <span className='sidebarTitle'>MEDIA SOCIAL</span>
             <div className="sidebarSocial">
-                <i className="sidebarIcon fab fa-facebook-square"></i>
-                <i className="sidebarIcon fab fa-instagram-square"></i>
-                <i className="sidebarIcon fab fa-twitter-square"></i>
-                <i className="sidebarIcon fab fa-whatsapp-square"></i>
+            <a 
+                    href="https://www.facebook.com/palmeiraslondres" 
+                    rel="noreferrer" 
+                    target="_blank">
+                        <i className="topIcon fab fa-facebook-square"></i>
+                </a>
+                <a 
+                    href="https://www.instagram.com/palmeiras_londres/" 
+                    rel="noreferrer" 
+                    target="_blank">
+                        <i className="topIcon fab fa-instagram-square"></i>
+                </a>
+                <a 
+                    href="https://twitter.com/" 
+                    rel="noreferrer" 
+                    target="_blank">
+                        <i className="topIcon fab fa-twitter-square"></i>
+                </a>
             </div>
             </div>
         </div>

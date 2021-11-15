@@ -5,17 +5,35 @@ import './topbar.css'
 
 const Topbar = () => {
     const { user, dispatch } = useContext(Context)
+    const PF = "http://localhost:1000/images/"
 
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" })
     }
+
     return (
         <div className='top'>
             <div className="topLeft">
-                <i className="topIcon fab fa-facebook-square"></i>
-                <i className="topIcon fab fa-instagram-square"></i>
-                <i className="topIcon fab fa-twitter-square"></i>
-                <i className="topIcon fab fa-whatsapp-square"></i>
+                <a 
+                    href="https://www.facebook.com/palmeiraslondres" 
+                    rel="noreferrer" 
+                    target="_blank">
+                        <i className="topIcon fab fa-facebook-square"></i>
+                </a>
+                <a 
+                    href="https://www.instagram.com/palmeiras_londres/" 
+                    rel="noreferrer" 
+                    target="_blank">
+                        <i className="topIcon fab fa-instagram-square"></i>
+                </a>
+                <a 
+                    href="https://twitter.com/" 
+                    rel="noreferrer" 
+                    target="_blank">
+                        <i className="topIcon fab fa-twitter-square"></i>
+                </a>
+               
+                
             </div>
             <div className="topCenter">
                 <ul className="topList">
@@ -30,7 +48,9 @@ const Topbar = () => {
             <div className="topRight">
                 {
                     user ? (
-                        <img className='topImg' src={user.profilePic} alt="" />
+                        <Link to='/settings'>
+                            <img className='topImg' src={PF+user.profilePic} alt="" />
+                        </Link>
                     ) : (
                         <ul className='topList'>
                             <li className='topListItem'>
@@ -43,7 +63,7 @@ const Topbar = () => {
                     )
                 }
                 
-                <i className="topSearchIcon fas fa-search"></i>
+                {/* <i className="topSearchIcon fas fa-search"></i> */}
             </div>
 
         </div>
